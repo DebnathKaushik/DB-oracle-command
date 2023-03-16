@@ -1,0 +1,6 @@
+
+Insert Into Pharmacy_Info values('877977','Jafar Pharma','Moishan Bari','01778697777')
+Insert Into Pharmacy_Info values('877988','Karim Pharma','Hazi Bari','01778698888')
+Insert Into Pharmacy_Info values('877999','Hasan Drug','Hazi Bari','01778698899')
+Insert Into Pharmacy_Info values('877100','Master Pharma','Kazi Bari','01978698898')
+Insert Into Pharmacy_Info values('888100','Jalal Drug Shop','Mia Bari','01878698777')

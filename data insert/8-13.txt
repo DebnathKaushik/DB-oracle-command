@@ -1,0 +1,85 @@
+
+Insert Into Drug_Info values('2121', '21-JAN-2019')
+Insert Into Drug_Info values('2222', '11-FEB-2019')
+Insert Into Drug_Info values('2323', '17-MAR-2019')
+Insert Into Drug_Info values('2424', '13-APR-2019')
+Insert Into Drug_Info values('2525', '02-MAY-2019')
+
+
+select * from Drug_Info
+
+
+
+Insert Into S_Assign values('101', 'Akash', '08-MAR-2017','Square')
+Insert Into S_Assign values('102', 'Himu', '11-MAY-2016','Beximco')
+Insert Into S_Assign values('103', 'Juwel', '22-JUL-2018','Opsonin')
+Insert Into S_Assign values('104', 'Asif', '29-NOV-2018','Acme')
+Insert Into S_Assign values('105', 'Shanto', '15-DEC-2016','Incepta')
+
+
+select * from S_Assign
+
+
+Insert Into D_Appoint values('MD Monir Hossain', '66285', 'Square')
+Insert Into D_Appoint values('MD Solomon Mia', '316459', 'Beximco')
+Insert Into D_Appoint values('Kashem Mia', '555289', 'Opsonin')
+Insert Into D_Appoint values('MD Mokles Mia', '272733', 'Acme')
+Insert Into D_Appoint values('Amir Chan', '212249', 'Incepta')
+
+
+select * from D_Appoint
+
+
+Insert Into Manufacture values('Square','2121')
+Insert Into Manufacture values('Beximco','2222')
+Insert Into Manufacture values('Opsonin','2323')
+Insert Into Manufacture values('Acme','2424')
+Insert Into Manufacture values('Incepta','2525')
+
+select * from Manufacture
+
+
+Insert Into Purchase values('2001', '2121')
+Insert Into Purchase values('2002', '2222')
+Insert Into Purchase values('2003', '2323')
+Insert Into Purchase values('2004', '2424')
+Insert Into Purchase values('2005', '2525')
+
+select * from Purchase
+
+
+Insert Into Delivery_Info values('662815', '877977')
+Insert Into Delivery_Info values('316459', '877988')
+Insert Into Delivery_Info values('555289', '877999')
+Insert Into Delivery_Info values('272733', '877100')
+Insert Into Delivery_Info values('212249', '888100')
+
+select * from Delivery_Info
+
+
+Insert Into Deal values('101', '877977')
+Insert Into Deal values('102', '877988')
+Insert Into Deal values('103', '877999')
+Insert Into Deal values('104', '877100')
+Insert Into Deal values('105', '888100')
+
+select * from Deal
+
+
+Insert Into Prescribe_Info values('888977', 2001)
+Insert Into Prescribe_Info values('888588', 2002)
+Insert Into Prescribe_Info values('888255', 2003)
+Insert Into Prescribe_Info values('888966', 2004)
+Insert Into Prescribe_Info values('888288', 2005)
+
+select * from Prescribe_Info
+
+
+Insert Into Sell_Info values('2121', '877977')
+Insert Into Sell_Info values('2222', '877988')
+Insert Into Sell_Info values('2323', '877999')
+Insert Into Sell_Info values('2424', '877100')
+Insert Into Sell_Info values('2525', '888100')
+
+
+select * from Sell_Info

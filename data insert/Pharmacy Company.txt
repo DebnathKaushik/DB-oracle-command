@@ -1,0 +1,5 @@
+Insert Into Pharmacy_Company values('Square','Baridhara','01911123456')
+Insert Into Pharmacy_Company values('Beximco','Rayerbag','01811123555')
+Insert Into Pharmacy_Company values('Opsonin','Mataketa','01711123444')
+Insert Into Pharmacy_Company values('Acme','Uttara','01511123666')
+Insert Into Pharmacy_Company values('Incepta','Purbachal','01911123233')

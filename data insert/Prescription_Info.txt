@@ -1,0 +1,5 @@
+Insert Into Prescription_Info values(2001,'Antor','Kazi_Bari','01-JUN-2001','01-JUN-2020',5)
+Insert Into Prescription_Info values(2002,'Sayan','Mia_Bari','01-JUN-2002','01-FEB-2020',7)
+Insert Into Prescription_Info values(2003,'Rayed','Najma_Bording','01-MAR-2002','10-FEB-2020',17)
+Insert Into Prescription_Info values(2004,'Kaushik','Hazi_Bari','15-FEB-2002','15-APR-2020',6)
+Insert Into Prescription_Info values(2005,'Tanvir','Mia_Bari','01-SEP-2000','22-OCT-2020',8)

@@ -1,0 +1,5 @@
+Insert Into Doctor_Info values('888977','Dr.Mannan Ali','ENT')
+Insert Into Doctor_Info values('888588','Dr.Karim Ali','Orthorpedics')
+Insert Into Doctor_Info values('888255','Dr.Ankur Roy','EYE')
+Insert Into Doctor_Info values('888966','Dr.SR Kumar','Gyno')
+Insert Into Doctor_Info values('888288','Dr.Sohel Nasir','Gastrology')

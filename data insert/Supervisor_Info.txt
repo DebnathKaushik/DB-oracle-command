@@ -1,0 +1,4 @@
+Insert Into Supervisor_Info values('Rabbi Ahmed',01,'25-JUL-2018')
+Insert Into Supervisor_Info values('Md Kabir Mia',02,'21-MAR-2018')
+Insert Into Supervisor_Info values('Sakil Ahmed',03,'29-MAY-2019')
+Insert Into Supervisor_Info values('Opu',04,'07-JUN-2019')

@@ -1,0 +1,130 @@
+create table Prescription_Info ( Pt_id  number(20) PRIMARY KEY, Pt_name varchar2(200), Pr_address varchar2(200), Pt_dob date, Ps_date date, Ps_Quantity number(30) )
+describe Prescription_Info
+
+
+create table Pharmacy_Info ( Ph_license varchar2(200) PRIMARY KEY, Ph_name varchar2(200), Ph_address varchar2(200), Ph_contactno varchar2(11) )
+describe Pharmacy_Info
+
+
+create table Pharmacy_Company( P_address varchar2(200), P_name varchar2(200) PRIMARY KEY, P_contactno varchar2(11) )
+describe Pharmacy_Company
+
+
+create table Patient_Info( Pt_id number(30) PRIMARY KEY, Pt_name varchar2(200), Pt_address varchar2(200), Pt_dob date )
+describe Patient_Info
+
+
+create table Doctor_Info( Doc_license varchar2(200) PRIMARY KEY, Doc_name varchar2(200), Speciality varchar2(200) )
+describe Doctor_Info
+
+
+create table Driver_Info( D_license varchar2(200) PRIMARY KEY, D_name varchar2(200) )
+describe Driver_Info
+
+
+create table Supervisor_Info( S_name varchar2(200), S_id number(30) PRIMARY KEY, Join_date date )
+describe Supervisor_Info
+
+create table Drug_Info( M_id varchar(200) PRIMARY KEY, M_date date )
+describe Drug_Info
+
+
+
+create table S_Assign( S_id varchar2(200) PRIMARY KEY, S_name varchar2(200), Join_date date, P_name varchar2(200), constraint PN foreign key(P_name) references Pharmacy_Company(P_name) )
+describe S_Assign
+
+
+create table D_Appoint(D_name varchar2(200), D_license varchar2(200) PRIMARY KEY, P_name varchar2(200), constraint PND foreign key (p_name) references Pharmacy_Company(P_name))
+describe D_Appoint
+
+
+create table Manufacture( P_name varchar(200) PRIMARY KEY, M_id varchar(200), constraint MF foreign key(M_id) references Drug_Info(M_id) )
+describe Manufacture
+
+
+create table Purchase( Pt_id varchar2(200) PRIMARY KEY, M_id varchar2(200), constraint PI foreign key(M_id) references Drug_Info(M_id) )
+describe Purchase
+
+
+create table Delivery_Info( D_license varchar2(200) PRIMARY KEY, Ph_license varchar(200), constraint DPH foreign key(Ph_license) references Pharmacy_Info(Ph_license) )
+describe Delivery_Info
+
+
+
+create table Deal( S_id varchar2(200) PRIMARY KEY, Ph_license varchar(200), constraint DEALPH foreign key(PH_license) references Pharmacy_Info(Ph_license) )
+describe Deal
+
+
+create table Prescribe_Info( Doc_license varchar2(200) PRIMARY KEY, Pt_id number(30), constraint PK foreign key(Pt_id) references Patient_Info(Pt_id) )
+describe Prescribe_Info
+
+
+create table Sell_Info( M_id varchar2(200) PRIMARY KEY, Ph_license varchar2(200), constraint SPH  foreign key(Ph_license) references Pharmacy_Info(Ph_license) )
+describe Sell_Info
+
+
+View--------------------
+
+create view P_address as
+select pt_id, pt_name, pr_address
+from prescription_info 
+where pr_address = 'Mia_Bari'
+
+
+describe P_address
+
+select * from P_address 
+
+      --------------------joining-------------------------
+
+select Ph_name, Ph_license, Ph_address, Ph_contactno
+from pharmacy_info 
+where Ph_address = 'Hazi Bari'
+
+
+select Pt_Id, Pt_name, COUNT (Pr_address)"PT_addrees"
+from Prescription_Info
+where Pr_address = 'Mia_Bari' 
+group by pt_ID , Pt_name
+
+select * from Prescription_Info
+
+
+select Doc_name from Doctor_Info
+where Doc_License = 
+(select Doc_License from Doctor_Info where Speciality = 'ENT') 
+OR
+Speciality = 'EYE'
+
+select * from Doctor_Info
+
+
+
+Select Pt_ID, Pt_name, Pt_address, Pt_dob
+from Patient_Info
+where Pt_dob < all (select Pt_dob from Patient_Info where Pt_dob = '01-MAR-2002')
+AND Pt_address <> 'Najma_Bording'
+
+---------Self Join-----------
+
+Select a.Doc_name, b.Speciality 
+from Doctor_Info a, Doctor_Info b 
+where a.doc_License = b.doc_License
+
+-------Equi Join--------
+select a.D_License, b.s_id
+from Delivery_Info a, Deal b 
+where a.Ph_license = b.Ph_license
+
+
+select Pt_ID, Pt_name, Pr_address,Pt_dob
+from Prescription_Info
+where Pt_dob < All(select Pt_dob from Prescription_Info where  Pt_dob = '15-FEB-2002')
+
+
+
+
+
+
+
+
